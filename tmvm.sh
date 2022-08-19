@@ -1,11 +1,9 @@
 #!/bin/bash
-i=$1
-if [ i = "upgrade" ]
-then
-l=pwd
-. <(wget -O- https://raw.githubusercontent.com/sebi-vscode2/ToolsMc/master/install.sh)
+echo "updating ToolsMc"
+l = pwd
+read pwd
+. <(wget -q -O- https://raw.githubusercontent.com/sebi-vscode2/ToolsMc/master/install.sh)
 clear
-cd l
+cd $l
+rm install.sh
 echo "Toolsmc is now upgraded"
-exit 1
-fi
